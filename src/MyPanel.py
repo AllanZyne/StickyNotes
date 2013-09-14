@@ -2,7 +2,7 @@
 import wx
 
 class MyPanel(wx.Panel):
-    def __init__(self, parent, size):
+    def __init__(self, parent, size = wx.DefaultSize):
         wx.Panel.__init__(self, parent, size = size)
 
 

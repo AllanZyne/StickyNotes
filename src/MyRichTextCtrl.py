@@ -38,6 +38,10 @@ class MyRichTextCtrl(rt.RichTextCtrl):
         self.Bind(wx.EVT_TEXT, self.OnTextChanged)
         self.Bind(wx.EVT_SIZE, self.OnSize)
 
+        buffer = self.GetBuffer()
+        wildcard, types = buffer.GetExtWildcard(save = True)
+        print wildcard, types
+
     def OnTextChanged(self, evt):
         # check if any adjustments are needed on every text update
         self._adjustCtrl()
